@@ -41,3 +41,4 @@ There is a secret key used for the HMAC hash located in config/application.yml. 
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
 
+## LICENSE: MIT
