@@ -1,0 +1,5 @@
+development:
+  BOUNCER_KEY: 11223355
+  BOUNCER_SECRET: "zzyyxxwwvvuu"
+  BOUNCER_SITE_URL: "http://localhost:14000/"
+  API_SECRET: "myAPISecret"

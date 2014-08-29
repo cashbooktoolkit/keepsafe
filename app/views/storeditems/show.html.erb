@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @storeditem.name %>
+</p>
+
+<%= link_to 'Edit', edit_storeditem_path(@storeditem) %> |
+<%= link_to 'Back', storeditems_path %>

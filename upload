@@ -1,0 +1,12 @@
+#! /bin/bash
+
+# Usage: upload.sh UID filename
+
+APISECRET="myAPISecret"
+URL="http://localhost:3010/storeditems"
+USER_ID=$1
+DATA="$USER_ID-$URL"
+
+TOKEN=`echo -n $DATA | openssl sha1 -hmac myAPISecret`
+
+curl $URL -i -H "X-Authorize-UID: $USER_ID" -H "Authorization: Token token=\"$TOKEN\"" -F 'storeditem[document]'=@$2

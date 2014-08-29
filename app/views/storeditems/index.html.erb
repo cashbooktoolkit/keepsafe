@@ -1,0 +1,21 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th width="15%" class="text-right">Date Added</th>
+      <th width="10%" class="text-right">Size</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @storeditems.each do |storeditem| %>
+      <tr>
+        <td><%= link_to storeditem.document.file.identifier, download_storeditem_path(storeditem) %></td>
+        <td class="text-right"><%= storeditem.created_at.strftime("%Y/%m/%d")  %></td>
+        <td class="text-right"><%= storeditem.document.file.size %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @storeditems %>
